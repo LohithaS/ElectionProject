@@ -1,0 +1,17 @@
+rule test {
+   property ilog.rules.business_name = "test";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      com.Voters() from voter;
+      evaluate ((voter.name != null
+      	&& voter.age >= 18));
+   } then {
+      acknowledge = "your vote is recorded";
+      ?context.updateContext();
+   } else {
+      acknowledge = "enter valid details";
+      ?context.updateContext();
+   }
+}
+

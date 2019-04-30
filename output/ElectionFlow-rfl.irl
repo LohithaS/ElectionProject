@@ -1,0 +1,33 @@
+
+flowtask ElectionFlow {
+  property mainflowtask = false;
+  property ilog.rules.business_name = "ElectionFlow";
+  property ilog.rules.package_name = "";
+  body {
+    ElectionFlow#voterCheck;
+    ElectionFlow#electionTree;
+  }
+};
+
+ruletask ElectionFlow#voterCheck {
+  property ilog.rules.business_name = "ElectionFlow>voterCheck";
+  property ilog.rules.package_name = "";
+  algorithm = sequential;
+  property ilog.rules.engine.sequential.fastpath = true;
+  ordering = sorted;
+  body {
+    voterCheck
+  }
+};
+
+ruletask ElectionFlow#electionTree {
+  property ilog.rules.business_name = "ElectionFlow>electionTree";
+  property ilog.rules.package_name = "";
+  algorithm = sequential;
+  property ilog.rules.engine.sequential.fastpath = true;
+  ordering = sorted;
+  body {
+    group("electionTree")
+  }
+};
+

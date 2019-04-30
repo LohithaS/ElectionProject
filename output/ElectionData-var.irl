@@ -1,0 +1,8 @@
+variables {
+  com.Election Election;
+  com.Voters voter;
+  java.lang.String result;
+  int noOfVotes;
+  java.lang.String acknowledge;
+  java.util.List votersList;
+}

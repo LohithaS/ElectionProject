@@ -1,0 +1,16 @@
+rule voterCheck {
+   property ilog.rules.business_name = "voterCheck";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      com.Election() from Election;
+      evaluate (Election.votesCalculation(Election.voter) < 1);
+   } then {
+      acknowledge = "please provide valid details";
+      ?context.updateContext();
+   } else {
+      acknowledge = "Your details have been recorded";
+      ?context.updateContext();
+   }
+}
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>voterCheck</name>
+  <uuid>cee77caf-9406-469d-a324-73051b8885e4</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    Election .votesCalculation ( the voters of Election ) is less than  1
+then
+set acknowledge to "please provide valid details"; 
+else set acknowledge to "Your details have been recorded"; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

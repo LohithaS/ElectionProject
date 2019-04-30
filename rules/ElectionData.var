@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>ElectionData</name>
+  <uuid>b34531b3-040b-45e6-a141-b5c0fbe4a6d4</uuid>
+  <variables name="Election" type="com.Election" initialValue="" verbalization="Election"/>
+  <variables name="voter" type="com.Voters" initialValue="" verbalization="voter"/>
+  <variables name="result" type="java.lang.String" initialValue="" verbalization="result"/>
+  <variables name="noOfVotes" type="int" initialValue="" verbalization="noOfVotes"/>
+  <variables name="acknowledge" type="java.lang.String" initialValue="" verbalization="acknowledge"/>
+  <variables name="votersList" type="java.util.List" initialValue="" verbalization="votersList"/>
+</ilog.rules.studio.model.base:VariableSet>

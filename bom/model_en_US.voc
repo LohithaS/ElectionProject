@@ -1,0 +1,19 @@
+# Vocabulary Properties
+uuid = 61729b41-537a-46d9-a0c7-e532c847d257
+
+# com.Election
+com.Election#concept.label = election
+com.Election.party#phrase.action = set the party of {this} to {party}
+com.Election.party#phrase.navigation = {party} of {this}
+com.Election.voter#phrase.action = set the voters of {this} to {voter}
+com.Election.voter#phrase.navigation = {voter} of {this}
+com.Election.votesCalculation(java.util.List)#phrase.navigation = {this}.votesCalculation({0})
+
+# com.Voters
+com.Voters#concept.label = voters
+com.Voters.age#phrase.action = set the age of {this} to {age}
+com.Voters.age#phrase.navigation = {age} of {this}
+com.Voters.name#phrase.action = set the name of {this} to {name}
+com.Voters.name#phrase.navigation = {name} of {this}
+com.Voters.partyName#phrase.action = set the party name of {this} to {party name}
+com.Voters.partyName#phrase.navigation = {party name} of {this}

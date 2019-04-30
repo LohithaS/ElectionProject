@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="ElectionOperation" usingRuleflow="true" ruleflowName="ElectionFlow" targetRuleProjectName="ElectionProject">
+  <name>ElectionOperation</name>
+  <uuid>66ce18a2-079b-41e7-8d81-21d4188231e2</uuid>
+  <referencedVariables variableName="result" variableSetName="ElectionData" direction="OUT">
+    <variableSet href="../rules/ElectionData.var#b34531b3-040b-45e6-a141-b5c0fbe4a6d4"/>
+  </referencedVariables>
+  <referencedVariables variableName="Election" variableSetName="ElectionData">
+    <variableSet href="../rules/ElectionData.var#b34531b3-040b-45e6-a141-b5c0fbe4a6d4"/>
+  </referencedVariables>
+  <referencedVariables variableName="noOfVotes" variableSetName="ElectionData" direction="OUT">
+    <variableSet href="../rules/ElectionData.var#b34531b3-040b-45e6-a141-b5c0fbe4a6d4"/>
+  </referencedVariables>
+  <referencedVariables variableName="acknowledge" variableSetName="ElectionData" direction="OUT">
+    <variableSet href="../rules/ElectionData.var#b34531b3-040b-45e6-a141-b5c0fbe4a6d4"/>
+  </referencedVariables>
+  <ruleflow href="../rules/ElectionFlow.rfl#7fbf1193-0b46-4bbb-b805-bf29e83ece7f"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="ElectionOperation_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../ElectionProject#5b8e5182-1c85-49c3-9817-f2e0be9f822d"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

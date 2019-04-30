@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTree xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>electionTree</name>
+  <uuid>a941deeb-919f-48d1-ac8b-b8ed41da08cb</uuid>
+  <locale>en_US</locale>
+  <definition>
+<DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+  <Body>
+    <Structure>
+      <ConditionDefinitions>
+        <ConditionDefinition Id="C0">
+          <ExpressionDefinition>
+            <Text/>
+          </ExpressionDefinition>
+        </ConditionDefinition>
+        <ConditionDefinition Id="C7">
+          <ExpressionDefinition>
+            <Text><![CDATA[the party of Election is <a string>   ]]></Text>
+          </ExpressionDefinition>
+        </ConditionDefinition>
+      </ConditionDefinitions>
+      <ActionDefinitions>
+        <ActionDefinition Id="A0">
+          <ExpressionDefinition>
+            <Text><![CDATA[set 'result' to <variable value>]]></Text>
+          </ExpressionDefinition>
+        </ActionDefinition>
+        <ActionDefinition Id="A1">
+          <ExpressionDefinition>
+            <Text><![CDATA[set 'result' to <variable value>]]></Text>
+          </ExpressionDefinition>
+        </ActionDefinition>
+        <ActionDefinition Id="A2">
+          <ExpressionDefinition>
+            <Text><![CDATA[set 'noOfVotes' to <variable value>]]></Text>
+          </ExpressionDefinition>
+        </ActionDefinition>
+        <ActionDefinition Id="A5">
+          <ExpressionDefinition>
+            <Text><![CDATA[set 'noOfVotes' to <variable value>]]></Text>
+          </ExpressionDefinition>
+        </ActionDefinition>
+        <ActionDefinition Id="A6">
+          <ExpressionDefinition>
+            <Text/>
+          </ExpressionDefinition>
+        </ActionDefinition>
+        <ActionDefinition Id="A7">
+          <ExpressionDefinition>
+            <Text><![CDATA[set 'result' to <variable value>]]></Text>
+          </ExpressionDefinition>
+        </ActionDefinition>
+        <ActionDefinition Id="A8">
+          <ExpressionDefinition>
+            <Text><![CDATA[set 'noOfVotes' to <variable value>]]></Text>
+          </ExpressionDefinition>
+        </ActionDefinition>
+      </ActionDefinitions>
+    </Structure>
+    <Contents>
+      <Partition DefId="C0">
+        <Condition>
+          <Expression/>
+          <Partition DefId="C7">
+            <Condition>
+              <Expression>
+                <Text><![CDATA[<an object> is <an object>]]></Text>
+                <Param><![CDATA["YCP"]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A6">
+                  <Expression/>
+                </Action>
+                <Action DefId="A1">
+                  <Expression>
+                    <Param><![CDATA["winning party is YCP"]]></Param>
+                  </Expression>
+                </Action>
+                <Action DefId="A2">
+                  <Expression>
+                    <Param><![CDATA[Election .votesCalculation( the voters of Election )]]></Param>
+                  </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+            <Condition>
+              <Expression>
+                <Text><![CDATA[<an object> is <an object>]]></Text>
+                <Param><![CDATA["TDP"]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A7">
+                  <Expression>
+                    <Param><![CDATA["winning party is TDP"]]></Param>
+                  </Expression>
+                </Action>
+                <Action DefId="A8">
+                  <Expression>
+                    <Param><![CDATA[Election .votesCalculation(the voters of Election )]]></Param>
+                  </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+            <Condition>
+              <Expression>
+                <Text><![CDATA[<an object> is <an object>]]></Text>
+                <Param><![CDATA["JSP"]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A6">
+                  <Expression/>
+                </Action>
+                <Action DefId="A0">
+                  <Expression>
+                    <Param><![CDATA["winning party is JSP"]]></Param>
+                  </Expression>
+                </Action>
+                <Action DefId="A5">
+                  <Expression>
+                    <Param><![CDATA[Election .votesCalculation(the voters of Election  )]]></Param>
+                  </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+          </Partition>
+        </Condition>
+      </Partition>
+    </Contents>
+  </Body>
+  <Resources DefaultLocale="en_US">
+    <ResourceSet Locale="en_US">
+      <Data Name="Definitions(C7)#HeaderText"><![CDATA[A]]></Data>
+    </ResourceSet>
+  </Resources>
+</DT></definition>
+</ilog.rules.studio.model.dt:DecisionTree>

@@ -1,0 +1,56 @@
+// begin DT electionTree
+// -- begin rule 'electionTree 0'
+rule electionTree_0 {
+   property ilog.rules.business_name = "electionTree 1";
+   property ilog.rules.dt = "electionTree";
+   property ilog.rules.group = "electionTree";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      com.Election() from Election;
+      evaluate ((((Election.party.equals("YCP")))));
+   } then {
+      result = "winning party is YCP";
+      noOfVotes = Election.votesCalculation(Election.voter);
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'electionTree 0'
+// -- begin rule 'electionTree 1'
+rule electionTree_1 {
+   property ilog.rules.business_name = "electionTree 2";
+   property ilog.rules.dt = "electionTree";
+   property ilog.rules.group = "electionTree";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      com.Election() from Election;
+      evaluate ((((Election.party.equals("TDP")))));
+   } then {
+      result = "winning party is TDP";
+      noOfVotes = Election.votesCalculation(Election.voter);
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'electionTree 1'
+// -- begin rule 'electionTree 2'
+rule electionTree_2 {
+   property ilog.rules.business_name = "electionTree 3";
+   property ilog.rules.dt = "electionTree";
+   property ilog.rules.group = "electionTree";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      com.Election() from Election;
+      evaluate ((((Election.party.equals("JSP")))));
+   } then {
+      result = "winning party is JSP";
+      noOfVotes = Election.votesCalculation(Election.voter);
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'electionTree 2'
+// end DT electionTree

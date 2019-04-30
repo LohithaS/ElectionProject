@@ -1,0 +1,23 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/ElectionProject//ElectionXOM"
+property uuid "327a5c89-8575-4197-bbb6-085d92263457"
+package com;
+
+
+public class Election
+{
+    public string party;
+    public java.util.List voter domain 0,* class com.Voters;
+    public Election();
+    public int votesCalculation(java.util.List arg domain 0,* class com.Voters);
+}
+
+public class Voters
+{
+    public int age;
+    public string name;
+    public string partyName;
+    public Voters();
+}
+
